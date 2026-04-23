@@ -54,7 +54,33 @@
     .photo-frame {
       width: 907px;
       height: 505px;
-      margin: 0 auto 0px;
+      margin: 0 auto 50px;
+      border-radius: 0px; /* 角を少しだけ丸くすると愛着がわきます */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.0);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+      position: relative;
+      z-index: 10; /* ハートより下にしたい場合は調整 */
+    }
+
+        /* --- 写真フレーム設定2 --- */
+    .photo-frame2 {
+      width: 440px;
+      height: 584px;
+      margin: 0 auto 50px;
+      border-radius: 0px; /* 角を少しだけ丸くすると愛着がわきます */
+      box-shadow: 0 10px 30px rgba(0,0,0,0.0);
+      transition: transform 0.4s ease, box-shadow 0.4s ease;
+      overflow: hidden;
+      position: relative;
+      z-index: 10; /* ハートより下にしたい場合は調整 */
+    }
+
+     /* --- 写真フレーム設定3 --- */
+    .photo-frame3 {
+      width: 546px;
+      height: 645px;
+      margin: 0 auto 50px;
       border-radius: 0px; /* 角を少しだけ丸くすると愛着がわきます */
       box-shadow: 0 10px 30px rgba(0,0,0,0.0);
       transition: transform 0.4s ease, box-shadow 0.4s ease;
@@ -71,7 +97,16 @@
     /* --- 各写真の背景指定 --- */
     .photo1 { background: url('photo1.webp') center/cover no-repeat; }
     .photo2 { background: url('photo2.webp') center/cover no-repeat; }
-    .photo3 { background: url('photo3.webp') center/cover no-repeat; }
+    .photo3 { background: url('photo4.webp') center/cover no-repeat; }
+    .photo4 { background: url('photo3.webp') center/cover no-repeat; }
+    .photo5 { background: url('photo5.webp') center/cover no-repeat; }
+    .photo6 { background: url('photo6.webp') center/cover no-repeat; }
+    .photo7 { background: url('photo7.webp') center/cover no-repeat; }
+    .photo8 { background: url('photo8.webp') center/cover no-repeat; }
+    .photo9 { background: url('photo9.webp') center/cover no-repeat; }
+    .photo10 { background: url('photo10.webp') center/cover no-repeat; }
+    .photo11 { background: url('photo11.webp') center/cover no-repeat; }
+    .photo12 { background: url('photo12.webp') center/cover no-repeat; }
 
     footer {
       text-align: center;
@@ -92,13 +127,54 @@
         <div class="photo-frame photo1"></div>
     </a>
 
-    <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
+    <a href="https://kennew0922-lgtm.github.io/yui-chan/">
         <div class="photo-frame photo2"></div>
     </a>
 
-    <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
+      <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
         <div class="photo-frame photo3"></div>
     </a>
+
+    <a href="https://kennew0922-lgtm.github.io/yui-chan/">
+        <div class="photo-frame photo4"></div>
+       </a>
+          <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
+        <div class="photo-frame2 photo5"></div>
+    </a>
+
+      <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
+        <div class="photo-frame photo6"></div>
+       </a>
+
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
+        <div class="photo-frame3 photo7"></div>
+       </a>
+
+   <video src="video.mp4" width="100%" controls></video>
+
+  <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
+        <div class="photo-frame photo8"></div>
+    </a>
+
+     <video src="mov1.mp4" width="100%" controls></video>
+
+    <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
+        <div class="photo-frame photo9"></div>
+    </a>
+  
+    <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
+        <div class="photo-frame photo10"></div>
+    </a>
+
+     <a href="https://kennew0922-lgtm.github.io/yui-chan/">
+        <div class="photo-frame photo11"></div>
+    </a>
+
+    <a href="https://kennew0922-lgtm.github.io/yui-chan/">
+        <div class="photo-frame3 photo12"></div>
+    </a>
+
+
 
   <footer>
     © 2026 Nanami & Ken. All Rights Reserved.<br>
