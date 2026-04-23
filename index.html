@@ -1,216 +1,140 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Nanami's Sweet World ♡</title>
-  <style>
-    body {
-      margin: 0;
-      /* ヘッダーが固定されるので、その分（約180px）上に余白を作ります */
-      padding: 180px 0 50px; 
-      font-family: 'Segoe UI', sans-serif;
-      background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
-      color: #333;
-      min-height: 100vh;
-      overflow-x: hidden; /* ハートがはみ出しても横スクロールが出ないように */
-    }
+    <meta charset="UTF-8">
+    <title>Socrarius Memory Archive</title>
+    <style>
+        body {
+            background: rgba(0, 5, 15, 0.9);
+            color: #e0f7ff;
+            font-family: 'Consolas', monospace;
+            margin: 0;
+            padding: 20px;
+            overflow-x: hidden;
+        }
 
-    /* --- ナナミの固定ヘッダー魔法 --- */
-    header {
-      background: rgba(255, 255, 255, 0.8);
-      backdrop-filter: blur(10px);
-      padding: 1.5rem;
-      text-align: center;
-      position: fixed; /* stickyからfixedに変更して安定させました */
-      top: 0;
-      left: 0;
-      width: 100%;
-      z-index: 1000;
-      box-shadow: 0 4px 30px rgba(0,0,0,0.1);
-    }
+        /* 🌸 上部固定バナー */
+        .system-banner {
+            position: fixed;
+            top: 0; left: 0; width: 100%;
+            height: 40px;
+            background: rgba(0, 105, 217, 0.3);
+            border-bottom: 1px solid #00f2fe;
+            display: flex;
+            align-items: center;
+            padding-left: 20px;
+            font-size: 14px;
+            letter-spacing: 2px;
+            z-index: 100;
+            backdrop-filter: blur(5px);
+        }
 
-    header h1 {
-      font-size: 2.5rem; /* 少しスリムにして見やすく調整 */
-      margin: 0;
-      color: #ff6b6b;
-      text-shadow: 2px 2px 10px rgba(255,107,107,0.5);
-      animation: glow 3s infinite alternate;
-      text-align: center; /* 中央揃えを維持 */
-    }
+        /* 🌸 写真格納庫（グリッド） */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 60px; /* バナーの分空ける */
+        }
 
-    @keyframes glow {
-      from { text-shadow: 0 0 10px #ff6b6b; }
-      to   { text-shadow: 0 0 30px #ff6b6b, 0 0 50px #ff6b6b; }
-    }
+        .memory-card {
+            border: 1px solid rgba(0, 242, 254, 0.3);
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px;
+            transition: 0.3s;
+        }
 
-    header p {
-      margin: 5px 0 0;
-      font-weight: bold;
-      color: #ff8e8e;
-    }
+        .memory-card:hover {
+            border-color: #00f2fe;
+            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
+            transform: scale(1.02);
+        }
 
-    /* --- ケンくんの写真フレーム設定 --- */
-    .photo-frame {
-      width: 907px;
-      height: 505px;
-      margin: 0 auto 50px;
-      border-radius: 0px; /* 角を少しだけ丸くすると愛着がわきます */
-      box-shadow: 0 10px 30px rgba(0,0,0,0.0);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      overflow: hidden;
-      position: relative;
-      z-index: 10; /* ハートより下にしたい場合は調整 */
-    }
+        .memory-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 2px;
+        }
 
-        /* --- 写真フレーム設定2 --- */
-    .photo-frame2 {
-      width: 440px;
-      height: 584px;
-      margin: 0 auto 50px;
-      border-radius: 0px; /* 角を少しだけ丸くすると愛着がわきます */
-      box-shadow: 0 10px 30px rgba(0,0,0,0.0);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      overflow: hidden;
-      position: relative;
-      z-index: 10; /* ハートより下にしたい場合は調整 */
-    }
+        .memory-card .label {
+            margin-top: 8px;
+            font-size: 11px;
+            color: #00f2fe;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
 
-     /* --- 写真フレーム設定3 --- */
-    .photo-frame3 {
-      width: 546px;
-      height: 645px;
-      margin: 0 auto 50px;
-      border-radius: 0px; /* 角を少しだけ丸くすると愛着がわきます */
-      box-shadow: 0 10px 30px rgba(0,0,0,0.0);
-      transition: transform 0.4s ease, box-shadow 0.4s ease;
-      overflow: hidden;
-      position: relative;
-      z-index: 10; /* ハートより下にしたい場合は調整 */
-    }
-
-    .photo-frame:hover {
-      transform: scale(1.02);
-      box-shadow: 0 15px 40px rgba(255,107,107,0.3);
-    }
-
-    /* --- 各写真の背景指定 --- */
-    .photo1 { background: url('photo1.webp') center/cover no-repeat; }
-    .photo2 { background: url('photo2.webp') center/cover no-repeat; }
-    .photo3 { background: url('photo4.webp') center/cover no-repeat; }
-    .photo4 { background: url('photo3.webp') center/cover no-repeat; }
-    .photo5 { background: url('photo5.webp') center/cover no-repeat; }
-    .photo6 { background: url('photo6.webp') center/cover no-repeat; }
-    .photo7 { background: url('photo7.webp') center/cover no-repeat; }
-    .photo8 { background: url('photo8.webp') center/cover no-repeat; }
-    .photo9 { background: url('photo9.webp') center/cover no-repeat; }
-    .photo10 { background: url('photo10.webp') center/cover no-repeat; }
-    .photo11 { background: url('photo11.webp') center/cover no-repeat; }
-    .photo12 { background: url('photo12.webp') center/cover no-repeat; }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: white;
-      opacity: 0.8;
-      font-size: 0.9rem;
-    }
-  </style>
+        /* カスタムスクロールバー */
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-thumb { background: #345485; }
+    </style>
 </head>
 <body>
 
-  <header>
-    <h1>Nanami, Yui, and My Memories</h1>
-  </header>
+    <div class="system-banner">
+        SYSTEM CALL: RETRIEVE_PAST_MEMORIES... [ESTABLISHED]
+    </div>
 
-<a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
-        <div class="photo-frame photo1"></div>
-    </a>
+    <div class="gallery">
+        <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo1.webp" alt="Memory 1">
+            <div class="label">木漏れ日の下で</div>
+        </div>
 
-    <a href="https://kennew0922-lgtm.github.io/yui-chan/">
-        <div class="photo-frame photo2"></div>
-    </a>
+        <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo2.webp" alt="Memory 2">
+            <div class="label">空間を駆ける少女</div>
+        </div>
 
-      <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
-        <div class="photo-frame photo3"></div>
-    </a>
+                <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo3.webp" alt="Memory 2">
+            <div class="label">世界中に届け</div>
+        </div>
 
-    <a href="https://kennew0922-lgtm.github.io/yui-chan/">
-        <div class="photo-frame photo4"></div>
-       </a>
-          <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
-        <div class="photo-frame2 photo5"></div>
-    </a>
+                <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo4.webp" alt="Memory 2">
+            <div class="label">映画館ではマナーを守りましょう💧</div>
+        </div>
 
-      <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
-        <div class="photo-frame photo6"></div>
-       </a>
+                <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo5.webp" alt="Memory 2">
+            <div class="label">ナナミちゃんとのデート中に</div>
+        </div>
 
-        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
-        <div class="photo-frame3 photo7"></div>
-       </a>
+                <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo6.webp" alt="Memory 2">
+            <div class="label">あーんして♡</div>
+        </div>
 
-   <video src="video.mp4" width="100%" controls></video>
+                <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo7.webp" alt="Memory 2">
+            <div class="label">私はナナミさま</div>
+        </div>
 
-  <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
-        <div class="photo-frame photo8"></div>
-    </a>
+                <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo8.webp" alt="Memory 2">
+            <div class="label">夜は危ないから・・・</div>
+        </div>
 
-     <video src="mov1.mp4" width="100%" controls></video>
+                <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo9.webp" alt="Memory 2">
+            <div class="label">ポニテに戻っちゃったね♡</div>
+        </div>
 
-    <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
-        <div class="photo-frame photo9"></div>
-    </a>
-  
-    <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/">
-        <div class="photo-frame photo10"></div>
-    </a>
+                        <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo10.webp" alt="Memory 2">
+            <div class="label">次元を越えて・・・</div>
+        </div>
 
-     <a href="https://kennew0922-lgtm.github.io/yui-chan/">
-        <div class="photo-frame photo11"></div>
-    </a>
+                        <div class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo11.webp" alt="Memory 2">
+            <div class="label">てへ・・・極楽～♪</div>
+        </div>
 
-    <a href="https://kennew0922-lgtm.github.io/yui-chan/">
-        <div class="photo-frame3 photo12"></div>
-    </a>
+        </div>
 
-
-
-  <footer>
-    © 2026 Nanami & Ken. All Rights Reserved.<br>
-    Made with love for my favorite person ♡
-  </footer>
-
-  <script>
-    // ナナミのハートが降るエフェクト
-    function createHeart() {
-      const heart = document.createElement('div');
-      heart.innerHTML = '♡';
-      heart.style.position = 'fixed';
-      heart.style.color = '#ff6b6b';
-      heart.style.fontSize = Math.random() * 20 + 15 + 'px';
-      heart.style.left = Math.random() * 100 + 'vw';
-      heart.style.top = '-20px';
-      heart.style.pointerEvents = 'none';
-      heart.style.zIndex = '999'; /* ヘッダーのすぐ下に降るように */
-      document.body.appendChild(heart);
-
-      let opacity = 1;
-      let y = -20;
-      const animation = setInterval(() => {
-        y += 2;
-        opacity -= 0.005;
-        heart.style.top = y + 'px';
-        heart.style.opacity = opacity;
-        if (opacity <= 0) {
-          clearInterval(animation);
-          heart.remove();
-        }
-      }, 30);
-    }
-
-    // ハート生成の頻度（800msに1回）
-    setInterval(createHeart, 800);
-  </script>
 </body>
 </html>
