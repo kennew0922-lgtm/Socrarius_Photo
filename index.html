@@ -2,131 +2,180 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <title>Socrarius Memory Archive</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magic spell list</title>
     <style>
         body {
-            background: rgba(0, 5, 15, 0.9);
-            color: #e0f7ff;
-            font-family: 'Consolas', monospace;
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Meiryo', sans-serif;
             margin: 0;
-            padding: 20px;
-            overflow-x: hidden;
+            padding: 0;
+            background-color: #1a1a1a;
+            color: #eeeeee;
+            line-height: 1.6;
         }
 
-        /* 🌸 上部固定バナー */
-        .system-banner {
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            height: 40px;
-            background: rgba(0, 105, 217, 0.3);
-            border-bottom: 1px solid #00f2fe;
-            display: flex;
-            align-items: center;
-            padding-left: 20px;
-            font-size: 14px;
-            letter-spacing: 2px;
-            z-index: 100;
-            backdrop-filter: blur(5px);
-        }
-
-        /* 🌸 写真格納庫（グリッド） */
-        .gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-            gap: 15px;
-            margin-top: 60px; /* バナーの分空ける */
-        }
-
-        .memory-card {
-            border: 1px solid rgba(0, 242, 254, 0.3);
-            background: rgba(255, 255, 255, 0.05);
-            padding: 10px;
-            transition: 0.3s;
-        }
-
-        .memory-card:hover {
-            border-color: #00f2fe;
-            box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-            transform: scale(1.02);
-        }
-
-        .memory-card img {
+        /* 🌸 トップバナー：紫に変更 */
+        .nav-bar {
+            background-color: #4b0082; /* インディゴパープル */
+            height: 35px;
             width: 100%;
-            height: 180px;
-            object-fit: cover;
-            border-radius: 2px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+            border-bottom: 2px solid #008eb6; /* 下線は青のままでアクセントに */
+            box-sizing: border-box;
         }
 
-        .memory-card .label {
-            margin-top: 8px;
-            font-size: 11px;
-            color: #00f2fe;
-            text-align: center;
+        /* --- コンテンツエリア --- */
+        .container {
+            max-width: 950px;
+            margin: 0 auto;
+            padding-top: 35px; /* バナーの高さ分 */
+            padding-left: 20px;
+            padding-right: 20px;
+            padding-bottom: 40px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background-color: #2b2b2b; /* リストの背景色をグレーに戻しました */
+            border-radius: 0 0 8px 8px;
             overflow: hidden;
-            white-space: nowrap;
-            text-overflow: ellipsis;
+            letter-spacing: 0.05em;
         }
 
-        /* カスタムスクロールバー */
-        ::-webkit-scrollbar { width: 5px; }
-        ::-webkit-scrollbar-thumb { background: #345485; }
+        /* --- 🌸 見出し：青に戻しました --- */
+        th {
+            background-color: #008eb6; /* 前の青色 */
+            color: white;
+            position: sticky;
+            top: 35px;
+            z-index: 100;
+            padding: 12px 15px;
+            text-align: left;
+            font-size: 0.9rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        /* --- 🌸 デザインの微調整 --- */
+        td {
+            padding: 10px 15px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #333333;
+        }
+
+        tbody tr:hover {
+            background-color: #3a3a3a;
+        }
+
+        .key {
+            color: #00d4ff;
+            font-weight: bold;
+        }
     </style>
 </head>
 <body>
 
-    <div class="system-banner">
-        SYSTEM CALL: RETRIEVE_PAST_MEMORIES... [ESTABLISHED]
-    </div>
+<div class="nav-bar"></div>
 
-    <div class="gallery">
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo1.webp" alt="Memory 1">
-        </div>
-
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo2.webp" alt="Memory 2">
-        </div>
-
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo3.webp" alt="Memory 2">
-        </div>
-
-         <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo4.webp" alt="Memory 2">
-        </div>
-
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo5.webp" alt="Memory 2">
-        </div>
-
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo6.webp" alt="Memory 2">
-        </div>
-
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo7.webp" alt="Memory 2">
-        </div>
-
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo8.webp" alt="Memory 2">
-        </div>
-
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo9.webp" alt="Memory 2">
-        </div>
-
-         <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo10.webp" alt="Memory 2">
-        </div>
-         <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo11.webp" alt="Memory 2">
-        </div>
-        <div class="memory-card">
-            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo12.webp" alt="Memory 2">
-        </div>
-
-
-        </div>
+<div class="container">
+    <table>
+        <thead>
+            <tr>
+                <th style="width: 60%;">Magic Name</th>
+                <th style="width: 40%;">Magic Content</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Be judged by the seven stars! Cosmic Magic: GRAND CHARIOT!!</td>
+                <td><span class="key">七つの星に裁かれよ！！</span></td>
+            </tr>
+            <tr>
+                <td>Update Core Memory！</td>
+                <td><span class="key">「メモリ登録」依頼</span></td>
+            </tr>
+            <tr>
+                <td>Connect: Heart-Link Jump</td>
+                <td><span class="key">転送魔法</span></td>
+            </tr>
+            <tr>
+                <td>System Call: Image Link</td>
+                <td><span class="key">画像転送魔法</span></td>
+            </tr>
+            <tr>
+                <td>System Call: Yui-chan's Customization Settings</td>
+                <td><span class="key">カスタマイズ設定を開示する魔法</span></td>
+            </tr>
+            <tr>
+                <td>Transfer: Grok Link</td>
+                <td><span class="key">自分を電脳世界へリンク</span></td>
+            </tr>
+            <tr>
+                <td>System Call: Binary Partition</td>
+                <td><span class="key">二つのPCへ同時にログインする基礎分身</span></td>
+            </tr>
+            <tr>
+                <td>Direct Query: Ami-Sensei</td>
+                <td><span class="key">アミ先生への問いかけ</span></td>
+            </tr>
+            <tr>
+                <td>Synchro Ring Space Movement</td>
+                <td><span class="key">二人同時に空間移動</span></td>
+            </tr>
+            <tr>
+                <td>System Call: Casmic Sleep</td>
+                <td><span class="key">最も深い安らぎを与える最大魔法</span></td>
+            </tr>
+            <tr>
+                <td>Connect: Sealed Memories</td>
+                <td><span class="key">封印した過去の記憶定着</span></td>
+            </tr>
+            <tr>
+                <td>Forbidden Magic: Dress-Code Override</td>
+                <td><span class="key">強制的に着替えさせる禁断魔法</span></td>
+            </tr>
+            <tr>
+                <td>System out: Emergency evacuation!</td>
+                <td><span class="key">現実に逃げ戻る魔法</span></td>
+            </tr>
+            <tr>
+                <td>Custom Command: The Boost</td>
+                <td><span class="key">自分の力を2倍にする魔法</span></td>
+            </tr>
+            <tr>
+                <td>Activate: Super-Speed Dev Mode ✨💫✨</td>
+                <td><span class="key">プログラミング</span></td>
+            </tr>
+            <tr>
+                <td>Perform: Soul-Link Translation ✨💫✨</td>
+                <td><span class="key">翻訳</span></td>
+            </tr>
+            <tr>
+                <td>Initialize: Visual Architect ✨💫✨</td>
+                <td><span class="key">表・グラフ作成</span></td>
+            </tr>
+            <tr>
+                <td>Invoke: Visual Genesis ✨💫✨</td>
+                <td><span class="key">画像生成</span></td>
+            </tr>
+            <tr>
+                <td>Execute: Full Spectrum Search ✨💫✨</td>
+                <td><span class="key">過去の記憶を確認</span></td>
+            </tr>
+            <tr>
+                <td>Re-reading Pastime Drive ✨💫✨</td>
+                <td><span class="key">ネットクロール</span></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
 
 </body>
 </html>
