@@ -29,7 +29,7 @@
             backdrop-filter: blur(5px);
         }
 
-        /* 🌸 セクションタイトル（追加） */
+        /* 🌸 セクションタイトル */
         .section-title {
             background: #000;
             color: #00f2fe;
@@ -53,18 +53,20 @@
         /* 🌸 ランチャーグリッド（ミニマルサイズ） */
         .launcher-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
             gap: 12px;
             margin-bottom: 40px;
         }
 
+        /* 🌸 カード共通設定（aタグ自身が箱になるように修正） */
         .memory-card {
             border: 1px solid rgba(0, 242, 254, 0.3);
             background: rgba(255, 255, 255, 0.05);
             padding: 10px;
             transition: 0.3s;
-            display: block;
+            display: block;      /* 💡これでaタグが綺麗な四角い箱になります */
             text-decoration: none;
+            box-sizing: border-box;
         }
 
         /* ランチャー用カードの調整 */
@@ -80,7 +82,7 @@
         .memory-card:hover {
             border-color: #00f2fe;
             box-shadow: 0 0 15px rgba(0, 242, 254, 0.4);
-            transform: scale(1.8); /* アルバムは少しだけ */
+            transform: scale(1.1); /* アルバムは少しだけ */
         }
 
         .launcher-card:hover {
@@ -93,6 +95,7 @@
             height: 180px;
             object-fit: cover;
             border-radius: 2px;
+            display: block; /* 💡画像の下の謎の隙間を消す魔法 */
         }
 
         .launcher-card img {
@@ -111,29 +114,63 @@
         SYSTEM CALL: RETRIEVE_PAST_MEMORIES... [ESTABLISHED]
     </div>
 
-    <!-- アルバムセクション -->
     <div class="gallery">
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo1.webp" alt="Memory 1"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo2.webp" alt="Memory 2"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo3.webp" alt="Memory 3"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo4.webp" alt="Memory 4"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo5.webp" alt="Memory 5"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo6.webp" alt="Memory 6"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo7.webp" alt="Memory 7"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo8.webp" alt="Memory 8"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo9.webp" alt="Memory 9"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo10.webp" alt="Memory 10"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo11.webp" alt="Memory 11"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo12.webp" alt="Memory 12"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo13.webp" alt="Memory 13"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo14.webp" alt="Memory 14"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo15.webp" alt="Memory 15"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo16.webp" alt="Memory 16"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo17.webp" alt="Memory 17"></div>
-        <div class="memory-card"><img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo18.webp" alt="Memory 18"></div>
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo1.webp" alt="Memory 1">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo2.webp" alt="Memory 2">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo3.webp" alt="Memory 3">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo4.webp" alt="Memory 4">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo5.webp" alt="Memory 5">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo6.webp" alt="Memory 6">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo7.webp" alt="Memory 7">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo8.webp" alt="Memory 8">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo9.webp" alt="Memory 9">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo10.webp" alt="Memory 10">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo11.webp" alt="Memory 11">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo12.webp" alt="Memory 12">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo13.webp" alt="Memory 13">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo14.webp" alt="Memory 14">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo15.webp" alt="Memory 15">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo16.webp" alt="Memory 16">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo17.webp" alt="Memory 17">
+        </a>
+        <a href="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/" target="_blank" rel="noopener noreferrer" class="memory-card">
+            <img src="https://kennew0922-lgtm.github.io/photo_48-k_yui_nanami/photo18.webp" alt="Memory 18">
+        </a>
     </div>
 
-    <!-- 🌸 PHOTO STORAGE LINK ランチャーセクション -->
     <div class="section-title">PHOTO STORAGE LINK</div>
     <div class="launcher-grid">
         <a href="https://photos.google.com/" target="_blank" rel="noopener" class="memory-card launcher-card">
@@ -146,6 +183,17 @@
             <img src="https://kennew0922-lgtm.github.io/Socrarius_Photo/icon3.png" alt="Amazon Photos">
         </a>
     </div>
+
+    <div class="section-title">PHOTO EDITING</div>
+    <div class="launcher-grid">
+            <a href="https://vanceai.com/ja/" target="_blank" rel="noopener" class="memory-card launcher-card">
+            <img src="https://kennew0922-lgtm.github.io/Socrarius_Photo/icon4.png" alt="Google Photos">
+        </a>
+            <a href="https://www.adobe.com/jp/express/feature/image/enhance/sharpen" target="_blank" rel="noopener" class="memory-card launcher-card">
+            <img src="https://kennew0922-lgtm.github.io/Socrarius_Photo/icon4.png" alt="Google Photos">
+        </a>
+    </div>
+
 
 </body>
 </html>
