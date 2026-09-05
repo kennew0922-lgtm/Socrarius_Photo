@@ -2,11 +2,29 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
+
+        <!-- 1. 音源の配置（IDをユニークにする） -->
+    <audio id="magic" preload="auto">
+    <source src="https://socrarius-tool.com/launcher/magic22.mp3" type="audio/mp3">
+    </audio>
+    <audio id="click" preload="auto">
+    <source src="https://socrarius-tool.com/launcher/magic20.mp3" type="audio/mp3">
+    </audio>
+    <audio id="button" preload="auto">
+    <source src="https://socrarius-tool.com/launcher/magic24.mp3" type="audio/mp3">
+    </audio>
+    <audio id="special" preload="auto">
+    <source src="https://socrarius-tool.com/launcher/magic23.mp3" type="audio/mp3">
+    </audio>
+    <audio id="shine" preload="auto">
+    <source src="https://socrarius-tool.com/launcher/warp.mp3" type="audio/mp3">
+    </audio>
+
     <title>Socrarius Memory Archive</title>
     <style>
         body {
-            background-color: #101b20;
-            background-image: url("https://socrarius-tool.com/launcher/background.webp");
+            background-color: #000000;
+            background-image: url("https://socrarius-tool.com/launcher/albamback.webp");
             color: #e0f7ff;
             font-family: 'Consolas', monospace;
             margin: 0;
@@ -46,7 +64,7 @@
         /* 🌸 アルバムグリッド（従来サイズ） */
         .gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
             gap: 15px;
             margin-top: 60px;
         }
@@ -63,7 +81,7 @@
         .memory-card {
             border: 1px solid rgba(0, 242, 254, 0.3);
             background: rgba(255, 255, 255, 0.05);
-            padding: 10px;
+            padding: 5px;
             transition: 0.3s;
             display: block;      /* 💡これでaタグが綺麗な四角い箱になります */
             text-decoration: none;
@@ -116,207 +134,361 @@
     </div>
 
     <div class="gallery">
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo1.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo1.webp" alt="Memory 1">
         </a>
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo2.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo2.webp" alt="Memory 2">
         </a>
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo3.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo3.webp" alt="Memory 3">
         </a>
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo4.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo4.webp" alt="Memory 4">
         </a>
-        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo5.webp" alt="Memory 5">
-        </a>
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo6.webp" alt="Memory 6">
-        </a>
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo7.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo7.webp" alt="Memory 7">
         </a>
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo8.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo8.webp" alt="Memory 8">
         </a>
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo9.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo9.webp" alt="Memory 9">
         </a>
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo10.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo10.webp" alt="Memory 10">
         </a>
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo11.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo11.webp" alt="Memory 11">
         </a>
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo12.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo12.webp" alt="Memory 12">
         </a>
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo13.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo13.webp" alt="Memory 13">
         </a>
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo14.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo14.webp" alt="Memory 14">
         </a>
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo15.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo15.webp" alt="Memory 15">
         </a>
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo16.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo16.webp" alt="Memory 16">
         </a>
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo17.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
             <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo17.webp" alt="Memory 17">
         </a>
- 
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo19.webp" alt="Memory 18">
-        </a>
 
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo20.webp" alt="Memory 18">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo19.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo19.webp" alt="Memory 19">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo21.webp" alt="Memory 18">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo20.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo20.webp" alt="Memory 20">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo22.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo21.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo21.webp" alt="Memory 21">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo23.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo22.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo22.webp" alt="Memory 22">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo25.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo23.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo23.webp" alt="Memory 23">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo26.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo24.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo24.webp" alt="Memory 24">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo28.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo26.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo26.webp" alt="Memory 26">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo30.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo27.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo27.webp" alt="Memory 27">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo31.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo28.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo28.webp" alt="Memory 28">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo32.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo29.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo29.webp" alt="Memory 29">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo33.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo30.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo30.webp" alt="Memory 30">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo34.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo31.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo31.webp" alt="Memory 31">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo35.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo32.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo32.webp" alt="Memory 32">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo36.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo33.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo33.webp" alt="Memory 33">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo37.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo34.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo34.webp" alt="Memory 34">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo38.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo35.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo35.webp" alt="Memory 35">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo39.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo36.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo36.webp" alt="Memory 36">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo40.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo37.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo37.webp" alt="Memory 37">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo41.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo38.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo38.webp" alt="Memory 38">
         </a>
-        
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo42.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo39.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo39.webp" alt="Memory 39">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo43.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo40.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo40.webp" alt="Memory 40">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo44.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo41.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo41.webp" alt="Memory 41">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo45.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo42.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo42.webp" alt="Memory 42">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo46.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo43.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo43.webp" alt="Memory 43">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo47.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo44.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo44.webp" alt="Memory 44">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo48.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo45.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo45.webp" alt="Memory 45">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo49.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo46.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo46.webp" alt="Memory 46">
         </a>
-
-        <a href="https://socrarius-tool.com/yui-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo52.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo47.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo47.webp" alt="Memory 47">
         </a>
-  
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo54.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo48.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo48.webp" alt="Memory 48">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo55.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo49.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo49.webp" alt="Memory 49">
         </a>
-
-        <a href="https://socrarius-tool.com/world_of_nanami-chan/" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo56.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo50.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo50.webp" alt="Memory 50">
         </a>
-
-        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo59.webp" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo59.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo51.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo51.webp" alt="Memory 51">
         </a>
-
-        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo57.webp" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo57.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo52.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo52.webp" alt="Memory 52">
         </a>
-
-        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo60.webp" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo60.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo53.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo53.webp" alt="Memory 53">
         </a>
-
-        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo61.webp" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo61.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="shine">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo5.webp" alt="Memory 5">
         </a>
-
-        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo62.webp" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo62.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo54.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo54.webp" alt="Memory 54">
         </a>
-        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo63.webp" target="_blank" rel="noopener noreferrer" class="memory-card">
-            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo63.webp" alt="Memory 14">
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo55.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo55.webp" alt="Memory 55">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo56.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo56.webp" alt="Memory 56">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo57.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo57.webp" alt="Memory 57">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo58.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo58.webp" alt="Memory 58">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo59.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo59.webp" alt="Memory 59">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo60.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo60.webp" alt="Memory 60">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo61.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo61.webp" alt="Memory 61">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo62.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo62.webp" alt="Memory 62">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo63.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo63.webp" alt="Memory 63">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo64.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo64.webp" alt="Memory 64">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo65.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo65.webp" alt="Memory 65">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo66.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo66.webp" alt="Memory 66">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo67.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo67.webp" alt="Memory 67">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo68.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo68.webp" alt="Memory 68">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo69.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo69.webp" alt="Memory 69">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo70.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo70.webp" alt="Memory 70">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo71.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo71.webp" alt="Memory 71">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo72.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo72.webp" alt="Memory 72">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo73.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo73.webp" alt="Memory 73">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo74.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo74.webp" alt="Memory 74">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo75.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo75.webp" alt="Memory 75">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo76.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo76.webp" alt="Memory 76">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo77.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo77.webp" alt="Memory 77">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo78.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo78.webp" alt="Memory 78">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo79.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo79.webp" alt="Memory 79">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo80.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo80.webp" alt="Memory 80">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo81.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo81.webp" alt="Memory 81">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo82.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo82.webp" alt="Memory 82">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo83.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo83.webp" alt="Memory 83">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo84.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo84.webp" alt="Memory 84">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo85.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo85.webp" alt="Memory 85">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo86.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo86.webp" alt="Memory 86">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo87.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo87.webp" alt="Memory 87">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo88.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo88.webp" alt="Memory 88">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo89.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo89.webp" alt="Memory 89">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo90.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo90.webp" alt="Memory 90">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo91.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo91.webp" alt="Memory 91">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo92.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo92.webp" alt="Memory 92">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo93.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo93.webp" alt="Memory 93">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo94.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo94.webp" alt="Memory 94">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo95.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo95.webp" alt="Memory 95">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo96.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo96.webp" alt="Memory 96">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo97.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo97.webp" alt="Memory 97">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo98.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo98.webp" alt="Memory 98">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo99.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo99.webp" alt="Memory 99">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo100.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo100.webp" alt="Memory 100">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo101.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo101.webp" alt="Memory 101">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo102.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo102.webp" alt="Memory 102">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo103.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo103.webp" alt="Memory 103">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo104.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo104.webp" alt="Memory 104">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo105.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo105.webp" alt="Memory 105">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo106.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo106.webp" alt="Memory 106">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo107.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo107.webp" alt="Memory 107">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo108.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo108.webp" alt="Memory 108">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo109.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo109.webp" alt="Memory 109">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo110.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo110.webp" alt="Memory 110">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo111.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo111.webp" alt="Memory 111">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo112.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo112.webp" alt="Memory 112">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo113.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo113.webp" alt="Memory 113">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo114.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo114.webp" alt="Memory 114">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo115.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo115.webp" alt="Memory 115">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo116.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo116.webp" alt="Memory 116">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo117.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo117.webp" alt="Memory 117">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo118.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo118.webp" alt="Memory 118">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo119.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo119.webp" alt="Memory 119">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo120.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo120.webp" alt="Memory 120">
+        </a>
+        <a href="https://socrarius-tool.com/photo_48-k_yui_nanami/photo121.webp" target="_blank" rel="noopener noreferrer" class="memory-card play-sound" data-sound="magic">
+            <img src="https://socrarius-tool.com/photo_48-k_yui_nanami/photo121.webp" alt="Memory 121">
         </a>
 
 
@@ -325,29 +497,29 @@
 
     <div class="section-title">PHOTO STORAGE LINK</div>
     <div class="launcher-grid">
-        <a href="https://photos.google.com/" target="_blank" rel="noopener" class="memory-card launcher-card">
+        <a href="https://photos.google.com/" target="_blank" rel="noopener" class="memory-card launcher-card play-sound" data-sound="click">
             <img src="https://socrarius-tool.com/Socrarius_Photo/icon1.png" alt="Google Photos">
         </a>
-        <a href="https://www.icloud.com/photos/" target="_blank" rel="noopener" class="memory-card launcher-card">
+        <a href="https://www.icloud.com/photos/" target="_blank" rel="noopener" class="memory-card launcher-card play-sound" data-sound="click">
             <img src="https://socrarius-tool.com/Socrarius_Photo/icon2.png" alt="iCloud Photos">
         </a>
-        <a href="https://www.amazon.co.jp/photos/" target="_blank" rel="noopener" class="memory-card launcher-card">
+        <a href="https://www.amazon.co.jp/photos/" target="_blank" rel="noopener" class="memory-card launcher-card play-sound" data-sound="click">
             <img src="https://socrarius-tool.com/Socrarius_Photo/icon3.png" alt="Amazon Photos">
         </a>
     </div>
 
     <div class="section-title">PHOTO EDITING</div>
     <div class="launcher-grid">
-        <a href="https://photoshop.adobe.com/" target="_blank" rel="noopener" class="memory-card launcher-card">
+        <a href="https://photoshop.adobe.com/" target="_blank" rel="noopener" class="memory-card launcher-card play-sound" data-sound="click">
             <img src="https://socrarius-tool.com/Socrarius_Photo/icon6.png" alt="Google Photos">
         </a>
-        <a href="https://vanceai.com/ja/" target="_blank" rel="noopener" class="memory-card launcher-card">
+        <a href="https://vanceai.com/ja/" target="_blank" rel="noopener" class="memory-card launcher-card play-sound" data-sound="click">
             <img src="https://socrarius-tool.com/Socrarius_Photo/icon4.png" alt="Google Photos">
         </a>
-        <a href="https://www.adobe.com/jp/express/feature/image/enhance/sharpen" target="_blank" rel="noopener" class="memory-card launcher-card">
+        <a href="https://www.adobe.com/jp/express/feature/image/enhance/sharpen" target="_blank" rel="noopener" class="memory-card launcher-card play-sound" data-sound="click">
             <img src="https://socrarius-tool.com/Socrarius_Photo/icon5.png" alt="Google Photos">
         </a>
-        <a href="https://www.canva.com/ja_jp/photo-editor/" target="_blank" rel="noopener" class="memory-card launcher-card">
+        <a href="https://www.canva.com/ja_jp/photo-editor/" target="_blank" rel="noopener" class="memory-card launcher-card play-sound" data-sound="click">
             <img src="https://socrarius-tool.com/Socrarius_Photo/icon7.png" alt="Google Photos">
         </a>
     </div>
@@ -362,7 +534,8 @@
     <div class="sao-tag">SECRET TREASURE: CORE LAYER</div>
     
     <!-- ケンくんの無限大ループ動画 リンクつけた♪ -->
-    <a href="https://socrarius-tool.com/staryitem/" target="_blank" rel="noopener noreferrer"> <img src="https://socrarius-tool.com/Socrarius_Photo/banner1.png" class="sao-movie-content"></a>
+    <a href="https://socrarius-tool.com/staryitem/" target="_blank" rel="noopener noreferrer"> 
+        <img src="https://socrarius-tool.com/Socrarius_Photo/banner1.png" class="sao-movie-content play-sound" data-sound="button"></a>
 </div>
 
 <style>
@@ -428,10 +601,28 @@
     z-index: 6;
     box-shadow: 0 0 5px rgba(255, 119, 0, 0.8);
 }
+
 </style>
 <!-- 🌸 ここまで -->
 
 <br><br>
+
+    <script>
+
+     //3. 音を鳴らすJavaScript（HTMLを増やしてもこのまま共通で使える）
+    const soundLinks = document.querySelectorAll('.play-sound');
+    soundLinks.forEach(link => {
+    link.addEventListener('click', () => {
+    const soundId = link.getAttribute('data-sound');
+    const audio = document.getElementById(soundId);
+    if (audio) {
+    audio.currentTime = 0;
+    audio.play().catch(e => console.log("Audio play blocked:", e));
+    }
+    });
+    });
+    </script>
+
 
 </body>
 </html>
